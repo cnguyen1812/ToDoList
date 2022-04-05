@@ -24,9 +24,9 @@ function onToDoListClicked(event){
     let checkbox = targetElement.querySelector(".checkbox")
 
     if (checkbox.checked){
-        targetElement.classList.add("Completed");
+        targetElement.classList.add("completed");
     } else {
-        targetElement.classList.remove("Completed");
+        targetElement.classList.remove("completed");
     }
 }
 
