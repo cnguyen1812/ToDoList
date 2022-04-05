@@ -1,4 +1,4 @@
-// Step 1
+// Step 1 Find Button
     let addTaskButton = document.getElementById("add-task");
     let newTaskInput = document.getElementById("task-input");
     let todoListContainer = document.getElementById("todo-list");
@@ -7,7 +7,7 @@
     let templateElement = document.getElementById("list-item-template");
     let template = templateElement.innerHTML;
     
-    // Step 2
+    // Step 2 Write Task
     function onAddTaskClicked(event) {
         let taskName = newTaskInput.value;
         newTaskInput.value = "";
@@ -42,7 +42,7 @@
         }
     }
     
- // Step 3 make the event trigger our functions
+ // Step 3 Make the event trigger our functions
     addTaskButton.addEventListener('click', onAddTaskClicked);
     todoListContainer.addEventListener('click', onTodolistClicked);
     showActiveButton.addEventListener('click', showActiveTasks);
