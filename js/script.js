@@ -4,36 +4,8 @@
     let todoListContainer = document.getElementById("todo-list");
     let showActiveButton = document.getElementById("show-active");
     
-    
-    /* We have chosen to use a template in our HTML.  So this time we need two
-       steps, locate the parent of the template (the <script> tag then get the
-       contents (innerHTML) which is our template.
-    
-       By encapsulating the HTML within a script tag we can reference it from our
-       javascript without needing a big string (lots of quoting and adding bits of
-       stings together to build a big string).  We experienced string building in
-       Flatland when we built the buzzword phrase.
-    
-       Another reason to use templates, is 'separation of concerns'.  We want all
-       HTML in the html file.  If we use string-building, the some of the layout is
-       not hidden in the JavaScript file.
-    
-       We've actually just implemented an extremely minimalistic templating language
-       to aid our todolist. This is VERY similar concept to how the modern front end
-       frameworks (Vue, Reach, Angular etc) using templates.
-    
-       So instead of just adding text to our container, we're adding a big chunk of
-       HTML (the template).*/
-    
-    /* Locate where <script> tag which contains our template  */
     let templateElement = document.getElementById("list-item-template");
-    /* Lets get the template, which is just all the HTML beteen the <script> tag */
     let template = templateElement.innerHTML;
-    
-
-    
-    
-    
     
     // Step 2
     function onAddTaskClicked(event) {
@@ -44,7 +16,6 @@
     }
 
     function onTodolistClicked(event) {
-        /* We need to know which element triggered the click event */
         let targetElement = event.target;
     
         while (!targetElement.classList.contains("task")) {
