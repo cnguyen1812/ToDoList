@@ -3,6 +3,7 @@
     let newTaskInput = document.getElementById("task-input");
     let todoListContainer = document.getElementById("todo-list");
     let showActiveButton = document.getElementById("show-active");
+    let showAllButton = document.getElementById("show-all");
     
     let templateElement = document.getElementById("list-item-template");
     let template = templateElement.innerHTML;
@@ -32,7 +33,7 @@
     }
     
     function showActiveTasks(){
-        let tasks = document.getElementsByClassName("task");
+        let tasks = document.getElementsByClassName("task")
         for (let i=0; i < tasks.length; i++){
             if (tasks[i].classList.contains("completed")){
                 tasks[i].style.display = "none"
@@ -41,8 +42,16 @@
             }
         }
     }
+
+    function showAllTasks(){
+        let tasks = document.getElementsByClassName("task")
+        for (let i=0; i < tasks.length; i++){
+                tasks[i].style.display = "block"
+        }
+    }
     
  // Step 3 Make the event trigger our functions
     addTaskButton.addEventListener('click', onAddTaskClicked);
     todoListContainer.addEventListener('click', onTodolistClicked);
     showActiveButton.addEventListener('click', showActiveTasks);
+    showAllButton.addEventListener('click', showAllTasks);
