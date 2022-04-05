@@ -57,9 +57,6 @@
         for (let i=0; i < tasks.length; i++){
             if (tasks[i].classList.contains("completed")){
                 tasks[i].style.display = "block"
-            } else {
-                tasks[i].style.display = "none"
-            }
         }
     }
     
