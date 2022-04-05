@@ -48,6 +48,9 @@
         } else {
             targetElement.classList.remove("completed");
         }
+        let taskNameElement = targetElement.querySelector(".task-name");
+        let taskName = taskNameElement.innerHTML
+        saveTask(taskName, checkbox.checked);
     }
     
     function showActiveTasks(){
